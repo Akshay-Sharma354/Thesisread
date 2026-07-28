@@ -1,0 +1,132 @@
+[
+  {
+    "id": "739f1a0c-90d6-4c43-b922-487bb614a1a3",
+    "ticker": "INFRATECH",
+    "company_name": "Infratech Solutions Limited",
+    "filing_type": "Financial Results",
+    "summary": "Infratech Solutions Limited reported its unaudited financial results for the quarter ended 30th June 2026. The company's revenue increased to Rs. 412.3 crore from Rs. 398.1 crore in the previous quarter, though profit after tax decreased slightly to Rs. 38.7 crore. The Board decided not to pay any interim dividend for the quarter.",
+    "significance_score": 4,
+    "filed_at": "2026-07-28",
+    "stored_at": "2026-07-28T11:54:09.962220+00:00"
+  },
+  {
+    "id": "b44d42dd-637a-45f0-b8dc-e01e70993b1e",
+    "ticker": "INFRATECH",
+    "company_name": "Infratech Solutions Limited",
+    "filing_type": "Financial Results",
+    "summary": "Infratech Solutions Limited announced its unaudited financial results for the quarter ended June 30, 2026. The company's revenue increased to Rs. 412.3 crore from Rs. 398.1 crore in the previous quarter, though profit declined slightly to Rs. 38.7 crore from Rs. 41.2 crore, with the order book standing at Rs. 2,140 crore. No interim dividend has been recommended for this quarter.",
+    "significance_score": 4,
+    "filed_at": "2026-07-28",
+    "stored_at": "2026-07-28T12:00:13.892087+00:00"
+  },
+  {
+    "id": "7fe70264-dd57-4266-be70-0460319f11d3",
+    "ticker": "GRNHARV",
+    "company_name": "GreenHarvest Agro Limited",
+    "filing_type": "Related Party Transaction",
+    "summary": "GreenHarvest Agro Limited has disclosed a related party transaction where it will buy organic fertilizer inputs from Harvest Agri Inputs Private Limited (owned 62% by the company's Managing Director, Mr. R. Deshmukh) for up to Rs. 18 crore in the financial year 2026-27. The Audit Committee has approved this transaction, confirming it is priced fairly based on market comparisons and follows normal business practices.",
+    "significance_score": 6,
+    "filed_at": "2026-07-28",
+    "stored_at": "2026-07-28T12:00:22.800201+00:00"
+  },
+  {
+    "id": "5ffd3221-46a6-4ceb-bd89-85479845b2c3",
+    "ticker": "GRNHARV",
+    "company_name": "GreenHarvest Agro Limited",
+    "filing_type": "Related Party Transaction",
+    "summary": "GreenHarvest Agro Limited has approved a lease agreement with a warehousing company controlled by its Managing Director and his spouse to rent warehouse facilities for up to Rs. 9.5 crore over 3 years starting August 2026. The company confirms this transaction is priced fairly based on an internal valuation, as required by regulatory rules for deals between a company and people connected to its leadership.",
+    "significance_score": 6,
+    "filed_at": "2026-07-28",
+    "stored_at": "2026-07-28T12:00:37.034507+00:00"
+  },
+  {
+    "id": "7ac73594-12ce-4948-af45-4d260a902f54",
+    "ticker": "NORTHSTARPH",
+    "company_name": "Northstar Pharmaceuticals Limited",
+    "filing_type": "Auditor Change",
+    "summary": "The company's auditor firm, M/s Kanakia & Associates, has resigned effective immediately after about 14 months into their 5-year contract, citing other professional commitments. The company will now search for a replacement auditor and will need shareholder approval to appoint a new one. The company confirms there are no hidden issues behind the auditor's departure.",
+    "significance_score": 8,
+    "filed_at": "2026-07-28",
+    "stored_at": "2026-07-28T12:00:47.991141+00:00"
+  },
+  {
+    "id": "aacb1fc8-d0e7-4624-95a6-df0c15394e44",
+    "ticker": "COASTALLOG",
+    "company_name": "Coastal Logistics Limited",
+    "filing_type": "Regulatory Compliance",
+    "summary": "Coastal Logistics Limited has submitted a certificate from its practicing company secretaries confirming that all share transfer documents and related certificates were issued to shareholders within the required timeframes during the first half of 2026. This is a routine compliance filing confirming the company processed all share transfers, transmissions, and related share transactions in a timely manner as mandated by stock exchange rules.",
+    "significance_score": 1,
+    "filed_at": "2026-07-28",
+    "stored_at": "2026-07-28T12:00:56.722455+00:00"
+  },
+  {
+    "id": "ec8bec98-9a8c-4581-a8e8-544fc306a6f0",
+    "ticker": "RELIANCE",
+    "company_name": "Reliance Industries",
+    "filing_type": "Board Meeting Outcome",
+    "summary": "The company's board has approved an investment of Rs 5000 crore into renewable energy projects. This is the third significant renewable energy investment the company has made this year, indicating the company is stepping up its efforts to transition to cleaner, more sustainable energy sources.",
+    "significance_score": 5,
+    "filed_at": "2026-07-28",
+    "stored_at": "2026-07-28T13:31:49.417726+00:00"
+  },
+  {
+    "id": "f0e5ecf7-9bba-4177-a07a-80d3a166d1da",
+    "ticker": "TCS",
+    "company_name": "TCS",
+    "filing_type": "Financial Results",
+    "summary": "The company's second quarter revenue grew 3% year-over-year to $7.2 billion, but profitability margins shrunk by 50 basis points due to rising wage costs. This marks the second consecutive quarter where the company has experienced margin compression, indicating ongoing pressure on profitability despite revenue growth.",
+    "significance_score": 6,
+    "filed_at": "2026-07-28",
+    "stored_at": "2026-07-28T13:31:56.888498+00:00"
+  },
+  {
+    "id": "a4609af9-4606-4d7d-b185-96ce2f20703e",
+    "ticker": "INFY",
+    "company_name": "Infosys",
+    "filing_type": "Resignation/Appointment",
+    "summary": "The company's Chief Executive Officer is resigning after 5 years in the role to start their own business ventures. This marks the third senior leadership change at the company within the past 2 years, which may indicate organizational instability or restructuring.",
+    "significance_score": 9,
+    "filed_at": "2026-07-28",
+    "stored_at": "2026-07-28T13:32:07.538839+00:00"
+  },
+  {
+    "id": "96321860-a00e-482c-989b-9b24b611acc9",
+    "ticker": "RELIANCE",
+    "company_name": "Reliance Industries",
+    "filing_type": "Board Meeting Outcome",
+    "summary": "The company's board has approved a Rs 10,000 crore investment in renewable energy projects as part of its clean energy transition strategy. This is the fourth major renewable investment announced this year, demonstrating the company's accelerated focus on sustainable energy. The company currently has an order book worth Rs 95,000 crore.",
+    "significance_score": 6,
+    "filed_at": "2026-07-28",
+    "stored_at": "2026-07-28T13:40:59.108256+00:00"
+  },
+  {
+    "id": "9847cf57-f6e6-4713-b60c-9d855c3e620b",
+    "ticker": "INFY",
+    "company_name": "Infosys",
+    "filing_type": "Financial Results",
+    "summary": "The company's second quarter revenue decreased 2% compared to the same period last year, reaching $4.3 billion. However, the company's profit margins improved by 80 basis points, marking the first margin expansion after three consecutive quarters of margin contraction.",
+    "significance_score": 5,
+    "filed_at": "2026-07-28",
+    "stored_at": "2026-07-28T13:41:12.416220+00:00"
+  },
+  {
+    "id": "678272a9-3145-4f0e-bb89-42b1abeaa6b6",
+    "ticker": "TCS",
+    "company_name": "TCS",
+    "filing_type": "Resignation/Appointment",
+    "summary": "The company's CEO has announced their retirement after 8 years of leadership. The filing indicates that three senior leadership positions have changed within the last 18 months, suggesting the company is actively managing succession planning and organizational restructuring at the top management level.",
+    "significance_score": 7,
+    "filed_at": "2026-07-28",
+    "stored_at": "2026-07-28T13:41:26.547910+00:00"
+  },
+  {
+    "id": "ce6a45c5-24b7-490a-9431-6778ad333053",
+    "ticker": "Reliance",
+    "company_name": "Reliance",
+    "filing_type": "Board Meeting Outcome",
+    "summary": "Reliance Industries' board approved a Rs 10,000 crore investment in renewable energy projects, aiming to generate 5 gigawatts of clean power by 2030. The company also declared an interim dividend of Rs 8 per share and reported a strong order book of Rs 95,000 crore, up 12% year-over-year, with the investment to be funded from internal company savings.",
+    "significance_score": 6,
+    "filed_at": "2026-07-28",
+    "stored_at": "2026-07-28T13:45:12.138049+00:00"
+  }
+]
