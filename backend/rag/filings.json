@@ -528,5 +528,295 @@
     "significance_score": 7,
     "filed_at": "2026-07-29",
     "stored_at": "2026-07-29T13:16:41.478775+00:00"
+  },
+  {
+    "id": "INFY_Financial Results",
+    "ticker": "INFY",
+    "company_name": "Infosys",
+    "filing_type": "Financial Results",
+    "summary": "Infosys reported Q2 revenue growth of 1% YoY with profit margins compressing by 100 basis points, marking the second consecutive quarter of margin decline. Management has cut FY2027 guidance from 4-6% to 2-4%, signaling cautious outlook.",
+    "significance_score": 8,
+    "filed_at": "Not specified",
+    "stored_at": "2026-07-29T13:47:40.169465+00:00"
+  },
+  {
+    "id": "INFY_Related Party Transaction (RPT)",
+    "ticker": "INFY",
+    "company_name": "Infosys",
+    "filing_type": "Related Party Transaction (RPT)",
+    "summary": "Infosys Board approved a Rs 200 crore IT services contract with Infosys Consulting, a subsidiary where the CEO holds directorship. This marks the second significant related-party transaction with the same entity within six months.",
+    "significance_score": 6,
+    "filed_at": "Not specified",
+    "stored_at": "2026-07-29T13:47:47.387739+00:00"
+  },
+  {
+    "id": "INFY_Executive Departure",
+    "ticker": "INFY",
+    "company_name": "Infosys",
+    "filing_type": "Executive Departure",
+    "summary": "Infosys CFO announces early retirement after 12 years of service, marking the third C-suite departure within 18 months. A 6-month transition period has been established to manage the leadership change.",
+    "significance_score": 7,
+    "filed_at": null,
+    "stored_at": "2026-07-29T13:47:56.382654+00:00"
+  },
+  {
+    "id": "TCS_Auditor Change",
+    "ticker": "TCS",
+    "company_name": "TCS",
+    "filing_type": "Auditor Change",
+    "summary": "TCS's auditor M/s Kanakia & Associates has resigned after 16 months into their 5-year term, citing other commitments. This marks the second auditor change within a 36-month period for the company.",
+    "significance_score": 7,
+    "filed_at": "not specified",
+    "stored_at": "2026-07-29T13:48:06.132286+00:00"
+  },
+  {
+    "id": "RELIANCE_Capital Investment Announcement",
+    "ticker": "RELIANCE",
+    "company_name": "Reliance Industries",
+    "filing_type": "Capital Investment Announcement",
+    "summary": "Reliance Industries' Board has approved a Rs 15,000 crore investment in renewable energy projects. This represents the fifth significant clean energy capital expenditure announcement within 18 months, with total commitments reaching Rs 85,000 crore targeted for completion by 2030.",
+    "significance_score": 6,
+    "filed_at": "Not specified",
+    "stored_at": "2026-07-29T13:48:16.388277+00:00"
+  },
+  {
+    "id": "RELIANCE_Material Event - Promoter Pledge",
+    "ticker": "RELIANCE",
+    "company_name": "Reliance Industries",
+    "filing_type": "Material Event - Promoter Pledge",
+    "summary": "Reliance Industries' promoter has pledged an additional 2% of shareholding, bringing total cumulative pledge to 18%. The pledging activity has accelerated during periods of stock weakness, compared to 5% pledge level two years prior.",
+    "significance_score": 7,
+    "filed_at": "Not specified",
+    "stored_at": "2026-07-29T13:48:25.557289+00:00"
+  },
+  {
+    "id": "HCL_RPT",
+    "ticker": "HCL",
+    "company_name": "HCL Technologies",
+    "filing_type": "RPT",
+    "summary": "HCL Technologies approved a related-party transaction to procure cloud services from HCL Infra, a promoter-linked entity, valued at Rs 300 crore. No independent valuation was appended to support the transaction pricing.",
+    "significance_score": 5,
+    "filed_at": null,
+    "stored_at": "2026-07-29T13:48:34.740630+00:00"
+  },
+  {
+    "id": "AXISBANK_Dividend Announcement",
+    "ticker": "AXISBANK",
+    "company_name": "Axis Bank",
+    "filing_type": "Dividend Announcement",
+    "summary": "Axis Bank's Board approved a dividend of Rs 4 per share, marking the third consecutive dividend increase within 12 months. The payout ratio stands at 40%, significantly higher than the historical average of 25%, indicating a shift towards higher shareholder returns.",
+    "significance_score": 6,
+    "filed_at": "Not specified in filing",
+    "stored_at": "2026-07-29T13:48:47.773618+00:00"
+  },
+  {
+    "id": "BAJAJAUT_Financial Results",
+    "ticker": "BAJAJAUT",
+    "company_name": "Bajaj Auto",
+    "filing_type": "Financial Results",
+    "summary": "Bajaj Auto reports production capacity utilization at 65%, the lowest level in 5 years, due to weak demand in the two-wheeler segment. The company is expected to revise its guidance reflecting the challenging market conditions.",
+    "significance_score": 7,
+    "filed_at": "Not specified",
+    "stored_at": "2026-07-29T13:48:56.343155+00:00"
+  },
+  {
+    "id": "TCS_Auditor Change",
+    "ticker": "TCS",
+    "company_name": "TCS",
+    "filing_type": "Auditor Change",
+    "summary": "Auditor M/s Kanakia & Associates resigns citing other commitments after 16 months into 5-year term. This is the second auditor change in 36 months.",
+    "significance_score": 6,
+    "filed_at": "2026-07-28",
+    "stored_at": "2026-07-29T13:50:49.197491+00:00"
+  },
+  {
+    "id": "RELIANCE_Filing",
+    "ticker": "RELIANCE",
+    "company_name": "Reliance Industries",
+    "filing_type": "Filing",
+    "summary": "Board approves Rs 15000 crore investment in renewable energy. This is the fifth major clean energy capex announcement in 18 months. Total committed: Rs 85000 crore by 2030.",
+    "significance_score": 6,
+    "filed_at": "2026-07-28",
+    "stored_at": "2026-07-29T13:50:55.639449+00:00"
+  },
+  {
+    "id": "RELIANCE_Filing",
+    "ticker": "RELIANCE",
+    "company_name": "Reliance Industries",
+    "filing_type": "Filing",
+    "summary": "Promoter pledges additional 2% of shareholding. Cumulative pledge now at 18% (vs 5% two years ago). Pledging accelerating during stock weakness.",
+    "significance_score": 7,
+    "filed_at": "2026-07-28",
+    "stored_at": "2026-07-29T13:51:02.606505+00:00"
+  },
+  {
+    "id": "AXISBANK_Dividend",
+    "ticker": "AXISBANK",
+    "company_name": "Axis Bank",
+    "filing_type": "Dividend",
+    "summary": "Board approved dividend of Rs 4 per share. This is the third consecutive dividend increase in 12 months. Payout ratio at 40% (historical average: 25%).",
+    "significance_score": 6,
+    "filed_at": "2026-07-28",
+    "stored_at": "2026-07-29T13:51:17.350071+00:00"
+  },
+  {
+    "id": "BAJAJAUT_Filing",
+    "ticker": "BAJAJAUT",
+    "company_name": "Bajaj Auto",
+    "filing_type": "Filing",
+    "summary": "Production capacity utilization drops to 65% (lowest in 5 years). Management cites demand weakness in two-wheeler segment. Guidance revision expected.",
+    "significance_score": 7,
+    "filed_at": "2026-07-28",
+    "stored_at": "2026-07-29T13:51:24.065979+00:00"
+  },
+  {
+    "id": "TCS_Auditor Change",
+    "ticker": "TCS",
+    "company_name": "TCS",
+    "filing_type": "Auditor Change",
+    "summary": "Auditor M/s Kanakia & Associates resigns citing other commitments after 16 months into 5-year term. This is the second auditor change in 36 months.",
+    "significance_score": 7,
+    "filed_at": "2026-07-28",
+    "stored_at": "2026-07-29T13:59:06.352830+00:00"
+  },
+  {
+    "id": "RELIANCE_Filing",
+    "ticker": "RELIANCE",
+    "company_name": "Reliance Industries",
+    "filing_type": "Filing",
+    "summary": "Board approves Rs 15000 crore investment in renewable energy. This is the fifth major clean energy capex announcement in 18 months. Total committed: Rs 85000 crore by 2030.",
+    "significance_score": 6,
+    "filed_at": "2026-07-28",
+    "stored_at": "2026-07-29T13:59:13.689929+00:00"
+  },
+  {
+    "id": "RELIANCE_Filing",
+    "ticker": "RELIANCE",
+    "company_name": "Reliance Industries",
+    "filing_type": "Filing",
+    "summary": "Promoter pledges additional 2% of shareholding. Cumulative pledge now at 18% (vs 5% two years ago). Pledging accelerating during stock weakness.",
+    "significance_score": 7,
+    "filed_at": "2026-07-28",
+    "stored_at": "2026-07-29T13:59:20.486403+00:00"
+  },
+  {
+    "id": "AXISBANK_Dividend",
+    "ticker": "AXISBANK",
+    "company_name": "Axis Bank",
+    "filing_type": "Dividend",
+    "summary": "Board approved dividend of Rs 4 per share. This is the third consecutive dividend increase in 12 months. Payout ratio at 40% (historical average: 25%).",
+    "significance_score": 6,
+    "filed_at": "2026-07-28",
+    "stored_at": "2026-07-29T13:59:33.184319+00:00"
+  },
+  {
+    "id": "BAJAJAUT_Filing",
+    "ticker": "BAJAJAUT",
+    "company_name": "Bajaj Auto",
+    "filing_type": "Filing",
+    "summary": "Production capacity utilization drops to 65% (lowest in 5 years). Management cites demand weakness in two-wheeler segment. Guidance revision expected.",
+    "significance_score": 7,
+    "filed_at": "2026-07-28",
+    "stored_at": "2026-07-29T13:59:38.504479+00:00"
+  },
+  {
+    "id": "TCS_Auditor Change",
+    "ticker": "TCS",
+    "company_name": "TCS",
+    "filing_type": "Auditor Change",
+    "summary": "Auditor M/s Kanakia & Associates resigns citing other commitments after 16 months into 5-year term. This is the second auditor change in 36 months.",
+    "significance_score": 6,
+    "filed_at": "2026-07-28",
+    "stored_at": "2026-07-29T14:01:11.357510+00:00"
+  },
+  {
+    "id": "RELIANCE_Filing",
+    "ticker": "RELIANCE",
+    "company_name": "Reliance Industries",
+    "filing_type": "Filing",
+    "summary": "Board approves Rs 15000 crore investment in renewable energy. This is the fifth major clean energy capex announcement in 18 months. Total committed: Rs 85000 crore by 2030.",
+    "significance_score": 6,
+    "filed_at": "2026-07-28",
+    "stored_at": "2026-07-29T14:01:17.527233+00:00"
+  },
+  {
+    "id": "RELIANCE_Filing",
+    "ticker": "RELIANCE",
+    "company_name": "Reliance Industries",
+    "filing_type": "Filing",
+    "summary": "Promoter pledges additional 2% of shareholding. Cumulative pledge now at 18% (vs 5% two years ago). Pledging accelerating during stock weakness.",
+    "significance_score": 7,
+    "filed_at": "2026-07-28",
+    "stored_at": "2026-07-29T14:01:25.979982+00:00"
+  },
+  {
+    "id": "AXISBANK_Dividend",
+    "ticker": "AXISBANK",
+    "company_name": "Axis Bank",
+    "filing_type": "Dividend",
+    "summary": "Board approved dividend of Rs 4 per share. This is the third consecutive dividend increase in 12 months. Payout ratio at 40% (historical average: 25%).",
+    "significance_score": 6,
+    "filed_at": "2026-07-28",
+    "stored_at": "2026-07-29T14:01:37.710888+00:00"
+  },
+  {
+    "id": "BAJAJAUT_Filing",
+    "ticker": "BAJAJAUT",
+    "company_name": "Bajaj Auto",
+    "filing_type": "Filing",
+    "summary": "Production capacity utilization drops to 65% (lowest in 5 years). Management cites demand weakness in two-wheeler segment. Guidance revision expected.",
+    "significance_score": 7,
+    "filed_at": "2026-07-28",
+    "stored_at": "2026-07-29T14:01:45.084641+00:00"
+  },
+  {
+    "id": "TCS_Auditor Change",
+    "ticker": "TCS",
+    "company_name": "TCS",
+    "filing_type": "Auditor Change",
+    "summary": "Auditor M/s Kanakia & Associates resigns citing other commitments after 16 months into 5-year term. This is the second auditor change in 36 months.",
+    "significance_score": 6,
+    "filed_at": "2026-07-28",
+    "stored_at": "2026-07-29T14:04:07.416853+00:00"
+  },
+  {
+    "id": "RELIANCE_Filing",
+    "ticker": "RELIANCE",
+    "company_name": "Reliance Industries",
+    "filing_type": "Filing",
+    "summary": "Board approves Rs 15000 crore investment in renewable energy. This is the fifth major clean energy capex announcement in 18 months. Total committed: Rs 85000 crore by 2030.",
+    "significance_score": 6,
+    "filed_at": "2026-07-28",
+    "stored_at": "2026-07-29T14:04:13.498786+00:00"
+  },
+  {
+    "id": "RELIANCE_Filing",
+    "ticker": "RELIANCE",
+    "company_name": "Reliance Industries",
+    "filing_type": "Filing",
+    "summary": "Promoter pledges additional 2% of shareholding. Cumulative pledge now at 18% (vs 5% two years ago). Pledging accelerating during stock weakness.",
+    "significance_score": 7,
+    "filed_at": "2026-07-28",
+    "stored_at": "2026-07-29T14:04:19.396549+00:00"
+  },
+  {
+    "id": "AXISBANK_Dividend",
+    "ticker": "AXISBANK",
+    "company_name": "Axis Bank",
+    "filing_type": "Dividend",
+    "summary": "Board approved dividend of Rs 4 per share. This is the third consecutive dividend increase in 12 months. Payout ratio at 40% (historical average: 25%).",
+    "significance_score": 6,
+    "filed_at": "2026-07-28",
+    "stored_at": "2026-07-29T14:04:34.218642+00:00"
+  },
+  {
+    "id": "BAJAJAUT_Filing",
+    "ticker": "BAJAJAUT",
+    "company_name": "Bajaj Auto",
+    "filing_type": "Filing",
+    "summary": "Production capacity utilization drops to 65% (lowest in 5 years). Management cites demand weakness in two-wheeler segment. Guidance revision expected.",
+    "significance_score": 7,
+    "filed_at": "2026-07-28",
+    "stored_at": "2026-07-29T14:04:39.976842+00:00"
   }
 ]
