@@ -12,12 +12,13 @@ from pipeline import run_pipeline
 from rag import memory_store
 from services.csv_ingestion import ingest_from_csv
 from services.email_service import send_filing_alert, send_test_email
+from mcp_client import EmailMCPClient, RAGMCPClient
 import config
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-app = FastAPI(title="SEBI Filing Intelligence Agent")
+app = FastAPI(title="SEBI Filing Intelligence Agent - MCP Edition")
 
 app.add_middleware(
     CORSMiddleware,
@@ -31,7 +32,7 @@ scheduler = BackgroundScheduler()
 @app.on_event("startup")
 def start_scheduler():
     scheduler.start()
-    logger.info("Scheduler started")
+    logger.info("Scheduler started - MCP Servers Ready")
 
 @app.on_event("shutdown")
 def stop_scheduler():
@@ -39,7 +40,7 @@ def stop_scheduler():
 
 @app.get("/health")
 def health():
-    return {"status": "ok"}
+    return {"status": "ok", "mcp_enabled": True}
 
 @app.post("/filings/analyze")
 def analyze_filing(company_name: str = Form(...), ticker: str = Form(...), raw_text: str = Form(...)):
@@ -53,7 +54,7 @@ def analyze_filing(company_name: str = Form(...), ticker: str = Form(...), raw_t
         if significance_score >= 7:
             alert_email = os.environ.get("ALERT_EMAIL")
             if alert_email:
-                send_filing_alert(
+                EmailMCPClient.send_alert(
                     recipient_email=alert_email,
                     company_name=company_name,
                     ticker=ticker,
@@ -96,7 +97,7 @@ async def upload_filing(company_name: str = Form(...), ticker: str = Form(...), 
         if significance_score >= 7:
             alert_email = os.environ.get("ALERT_EMAIL")
             if alert_email:
-                send_filing_alert(
+                EmailMCPClient.send_alert(
                     recipient_email=alert_email,
                     company_name=company_name,
                     ticker=ticker,
@@ -149,6 +150,7 @@ def company_history(ticker: str):
 def scheduler_status():
     return {
         "running": scheduler.running,
+        "mcp_enabled": True,
         "jobs": [{"id": job.id, "name": job.name} for job in scheduler.get_jobs()]
     }
 
