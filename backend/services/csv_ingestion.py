@@ -1,72 +1,65 @@
 """
-CSV filing uploader - user uploads CSV with filings, we process them.
+CSV ingestion service - processes bulk filings
 """
 import logging
+import os
+from io import StringIO
 import csv
-import io
-from models import FilingInput
 from pipeline import run_pipeline
-from rag import memory_store
+from models import FilingInput
+from services.email_service import send_filing_alert
 
 logger = logging.getLogger(__name__)
 
 def ingest_from_csv(csv_content: str):
-    """
-    Process a CSV with columns: company_name, ticker, filing_text, filed_at
-    """
-    logger.info("Starting CSV filing ingestion...")
-    
+    """Process filings from CSV"""
     try:
-        reader = csv.DictReader(io.StringIO(csv_content))
-        rows = list(reader)
-        logger.info(f"Found {len(rows)} rows in CSV")
+        reader = csv.DictReader(StringIO(csv_content))
+        processed = 0
+        failed = 0
         
-        processed_count = 0
-        for row in rows:
+        for row in reader:
             try:
                 company_name = row.get('company_name', '').strip()
                 ticker = row.get('ticker', '').strip()
                 filing_text = row.get('filing_text', '').strip()
-                filed_at = row.get('filed_at')
                 
                 if not all([company_name, ticker, filing_text]):
-                    logger.warning(f"Skipping row - missing required fields")
+                    failed += 1
                     continue
                 
-                if len(filing_text) < 50:
-                    logger.warning(f"Skipping {company_name} - insufficient text")
-                    continue
+                filing = FilingInput(company_name=company_name, ticker=ticker, raw_text=filing_text)
+                result = run_pipeline(filing)
                 
-                # Check for duplicates
-                existing = memory_store.all_recent(limit=1000)
-                already_seen = any(
-                    e.get('ticker') == ticker and filing_text[:100] in e.get('summary', '')
-                    for e in existing
-                )
+                significance_score = result.get('significance', {}).get('significance_score', 0)
                 
-                if already_seen:
-                    logger.info(f"Skipping duplicate: {company_name}")
-                    continue
+                if significance_score >= 7:
+                    alert_email = os.environ.get("ALERT_EMAIL")
+                    if alert_email:
+                        send_filing_alert(
+                            recipient_email=alert_email,
+                            company_name=company_name,
+                            ticker=ticker,
+                            headline=result.get('alert_headline', ''),
+                            body=result.get('alert_body', ''),
+                            significance_score=significance_score
+                        )
+                        logger.info("Email alert sent for " + company_name + " - Score: " + str(significance_score))
                 
-                # Process through pipeline
-                filing = FilingInput(
-                    company_name=company_name,
-                    ticker=ticker,
-                    raw_text=filing_text,
-                    filed_at=filed_at
-                )
+                processed += 1
+                logger.info("✓ Processed " + company_name + " - Significance: " + str(significance_score) + "/10")
                 
-                analysis = run_pipeline(filing)
-                processed_count += 1
-                logger.info(f"✓ Processed {company_name} - Significance: {analysis['significance']['significance_score']}/10")
-            
             except Exception as e:
-                logger.error(f"Error processing row: {e}")
-                continue
+                failed += 1
+                logger.error("Failed to process row: " + str(e))
         
-        logger.info(f"CSV ingestion complete: {processed_count} filings processed")
-        return {"status": "success", "processed": processed_count, "total_rows": len(rows)}
+        return {
+            "status": "success",
+            "processed": processed,
+            "failed": failed,
+            "message": str(processed) + " filings processed, " + str(failed) + " failed"
+        }
     
     except Exception as e:
-        logger.error(f"CSV parsing failed: {e}")
-        raise
+        logger.error("CSV ingestion failed: " + str(e))
+        return {"status": "error", "message": str(e)}

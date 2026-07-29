@@ -228,5 +228,245 @@
     "significance_score": 7,
     "filed_at": "2026-07-28",
     "stored_at": "2026-07-29T12:06:25.088664+00:00"
+  },
+  {
+    "id": "548f1f16-df11-4ee6-a6ef-039d4d13700c",
+    "ticker": "INFY",
+    "company_name": "Infosys",
+    "filing_type": "Financial Results",
+    "summary": "The company reported significantly slower revenue growth in the second quarter at just 1% compared to 5% in the first quarter. Profit margins have shrunk by 1 percentage point and continue to decline for the second quarter in a row. Management has also lowered its earnings outlook for the full year 2027, now expecting growth between 2-4% instead of the previously promised 4-6%.",
+    "significance_score": 8,
+    "filed_at": "2026-07-28",
+    "stored_at": "2026-07-29T13:01:26.024074+00:00"
+  },
+  {
+    "id": "7a1d8c05-dc36-4869-9236-9ec2a632e375",
+    "ticker": "INFY",
+    "company_name": "Infosys",
+    "filing_type": "Related Party Transaction",
+    "summary": "The company's board has approved a Rs 200 crore contract with Infosys Consulting, a subsidiary where the CEO serves as a director, creating a conflict of interest. This is the second significant business deal between the two companies in the last six months, raising questions about fair dealing and arm's-length pricing in related-party transactions.",
+    "significance_score": 6,
+    "filed_at": "2026-07-20",
+    "stored_at": "2026-07-29T13:01:40.769061+00:00"
+  },
+  {
+    "id": "2f394047-1935-431d-84aa-ad8c75c88e37",
+    "ticker": "INFY",
+    "company_name": "Infosys",
+    "filing_type": "Resignation/Appointment",
+    "summary": "The company's Chief Financial Officer has announced early retirement after 12 years of service, with a 6-month transition period. This is the third senior executive departure in the past 18 months, following the exits of the CTO and Chief Strategy Officer. The company must now manage the leadership transition and ensure continuity in financial and operational management.",
+    "significance_score": 7,
+    "filed_at": "2026-07-10",
+    "stored_at": "2026-07-29T13:01:52.686762+00:00"
+  },
+  {
+    "id": "5be2b233-ae9f-4924-a945-2060ce53f53a",
+    "ticker": "TCS",
+    "company_name": "TCS",
+    "filing_type": "Auditor Change",
+    "summary": "The company's auditor, M/s Kanakia & Associates, has resigned after 16 months of their 5-year appointment, citing other business commitments. This is the second change of auditors within the last 36 months, which may raise questions about audit continuity and stability.",
+    "significance_score": 8,
+    "filed_at": "2026-07-28",
+    "stored_at": "2026-07-29T13:02:03.874240+00:00"
+  },
+  {
+    "id": "96ad98ba-8ecd-478b-8ed1-c0dfd3caf512",
+    "ticker": "RELIANCE",
+    "company_name": "Reliance Industries",
+    "filing_type": "Board Meeting Outcome",
+    "summary": "The company's board has approved a Rs 15,000 crore investment in renewable energy projects, marking the fifth such major announcement in the past 18 months. This is part of a larger commitment to invest Rs 85,000 crore in clean energy by 2030, demonstrating the company's strategic focus on sustainable business expansion.",
+    "significance_score": 6,
+    "filed_at": "2026-07-28",
+    "stored_at": "2026-07-29T13:02:17.430116+00:00"
+  },
+  {
+    "id": "964aa850-1a5f-4b5d-8c72-97bafb09e5f6",
+    "ticker": "RELIANCE",
+    "company_name": "Reliance Industries",
+    "filing_type": "Promoter Shareholding/Pledge",
+    "summary": "The company's promoter has pledged an additional 2% of their shareholding as collateral, bringing the total pledged shares to 18%. This represents a significant increase from just 5% pledged two years ago, with the pledging activity accelerating during a period of stock price weakness.",
+    "significance_score": 7,
+    "filed_at": "2026-07-25",
+    "stored_at": "2026-07-29T13:02:31.459688+00:00"
+  },
+  {
+    "id": "63dc9a59-385f-44d2-baa6-adfb51d79efd",
+    "ticker": "HCL",
+    "company_name": "HCL Technologies",
+    "filing_type": "Related Party Transaction",
+    "summary": "The company has approved a deal to buy cloud services from HCL Infra, a company connected to the promoter, for Rs 300 crore. This is a related-party transaction that was approved, but no independent valuation report was provided to justify the price being paid.",
+    "significance_score": 6,
+    "filed_at": "2026-07-28",
+    "stored_at": "2026-07-29T13:02:43.541782+00:00"
+  },
+  {
+    "id": "8985c984-ddda-463e-a889-522c47dc0c77",
+    "ticker": "HCL",
+    "company_name": "HCL Technologies",
+    "filing_type": "Related Party Transaction",
+    "summary": "The company has entered into a third related-party transaction worth Rs 300 crore for cloud services within a 4-month period. Combined with previous deals in logistics (Rs 100 crore) and real estate (Rs 150 crore), the company's total exposure to related-party transactions has reached Rs 550 crore. These transactions require board and shareholder approval under SEBI regulations.",
+    "significance_score": 6,
+    "filed_at": "2026-07-28",
+    "stored_at": "2026-07-29T13:02:58.078930+00:00"
+  },
+  {
+    "id": "b69eef0c-00fc-4680-8c1f-9eca8b9491f7",
+    "ticker": "AXISBANK",
+    "company_name": "Axis Bank",
+    "filing_type": "Corporate Action",
+    "summary": "The company's board has approved a dividend of Rs 4 per share, marking the third dividend increase within the past year. This represents a significant shift in the company's dividend policy, with the payout ratio rising to 40%, well above the historical average of 25%, indicating the company is returning more profits to shareholders.",
+    "significance_score": 6,
+    "filed_at": "2026-07-28",
+    "stored_at": "2026-07-29T13:03:13.541031+00:00"
+  },
+  {
+    "id": "19414c5c-8b53-47b0-b109-73bc3ab1e6de",
+    "ticker": "BAJAJAUT",
+    "company_name": "Bajaj Auto",
+    "filing_type": "Financial Results",
+    "summary": "The company's factories are running at only 65% of their full capacity, the lowest level in the last 5 years, because demand for two-wheeler products has weakened. Management is expected to lower its future earnings and revenue projections due to this slowdown.",
+    "significance_score": 8,
+    "filed_at": "2026-07-28",
+    "stored_at": "2026-07-29T13:03:24.499764+00:00"
+  },
+  {
+    "id": "5f8cfd90-eb4c-44cd-bbe4-c8eb94019312",
+    "ticker": "INFY",
+    "company_name": "Infosys",
+    "filing_type": "Financial Results",
+    "summary": "The company's quarterly revenue growth has slowed significantly to just 1% compared to 5% in the previous quarter, indicating weakening business momentum. Profit margins have shrunk for the second quarter in a row by 100 basis points, raising profitability concerns. Management has also downgraded its full-year earnings growth forecast for FY2027 from 4-6% to a lower 2-4% range.",
+    "significance_score": 8,
+    "filed_at": "2026-07-28",
+    "stored_at": "2026-07-29T13:06:14.550514+00:00"
+  },
+  {
+    "id": "c6bbeb63-c7cf-4ed9-b2cf-30143d2efb56",
+    "ticker": "INFY",
+    "company_name": "Infosys",
+    "filing_type": "Related Party Transaction",
+    "summary": "The company's board has approved a Rs 200 crore contract with Infosys Consulting, a subsidiary where the CEO serves as a director. This is the second major contract between the company and this related entity within the past 6 months, which requires disclosure because the CEO has a direct interest in the subsidiary.",
+    "significance_score": 6,
+    "filed_at": "2026-07-20",
+    "stored_at": "2026-07-29T13:06:28.006160+00:00"
+  },
+  {
+    "id": "55e45072-0459-4e2b-86a0-20252d8afd15",
+    "ticker": "INFY",
+    "company_name": "Infosys",
+    "filing_type": "Resignation/Appointment",
+    "summary": "The company's Chief Financial Officer (CFO) has announced early retirement after 12 years of service, with a 6-month transition period. This is the third senior executive departure in the past 18 months, following the exits of the Chief Technology Officer and Chief Strategy Officer. The company must now manage the transition and plan for leadership replacements in these key roles.",
+    "significance_score": 7,
+    "filed_at": "2026-07-10",
+    "stored_at": "2026-07-29T13:06:42.895038+00:00"
+  },
+  {
+    "id": "34da59bc-a208-4e76-bafb-2d2b93ccd0aa",
+    "ticker": "TCS",
+    "company_name": "TCS",
+    "filing_type": "Auditor Change",
+    "summary": "The company's auditor, M/s Kanakia & Associates, has resigned from their position after serving for 16 months of their 5-year contract, citing other commitments. This is the second auditor change within the past 3 years, which may indicate potential concerns about audit stability or ongoing issues within the organization.",
+    "significance_score": 8,
+    "filed_at": "2026-07-28",
+    "stored_at": "2026-07-29T13:06:54.732553+00:00"
+  },
+  {
+    "id": "03da362b-596d-4d8a-ade4-286bbb9ebab5",
+    "ticker": "RELIANCE",
+    "company_name": "Reliance Industries",
+    "filing_type": "Board Meeting Outcome",
+    "summary": "The company's board has approved a Rs 15,000 crore investment in renewable energy projects, marking the fifth major clean energy announcement in the past 18 months. This is part of the company's larger plan to invest Rs 85,000 crore in renewable energy by 2030, demonstrating a significant commitment to transitioning toward clean energy generation.",
+    "significance_score": 6,
+    "filed_at": "2026-07-28",
+    "stored_at": "2026-07-29T13:07:11.261472+00:00"
+  },
+  {
+    "id": "7f946000-4547-4616-a8ab-b21a9ec52071",
+    "ticker": "RELIANCE",
+    "company_name": "Reliance Industries",
+    "filing_type": "Promoter Shareholding/Pledge",
+    "summary": "The company's promoter has pledged an additional 2% of their shares as collateral, bringing the total pledged shareholding to 18%. This represents a significant increase from 5% two years earlier, with the pledging activity accelerating during a period of stock price weakness. Promoter pledges are typically made to secure loans or other financial obligations.",
+    "significance_score": 7,
+    "filed_at": "2026-07-25",
+    "stored_at": "2026-07-29T13:07:25.198998+00:00"
+  },
+  {
+    "id": "9132d49f-13e9-409a-9478-cc9f70274714",
+    "ticker": "HCL",
+    "company_name": "HCL Technologies",
+    "filing_type": "Related Party Transaction",
+    "summary": "The company has approved a deal to buy cloud computing services worth Rs 300 crore from HCL Infra, a company connected to the promoter. The company did not get an independent expert valuation to confirm this price is fair, which is a standard practice for such large insider deals.",
+    "significance_score": 6,
+    "filed_at": "2026-07-28",
+    "stored_at": "2026-07-29T13:07:37.432619+00:00"
+  },
+  {
+    "id": "1e5de267-0273-4fa9-a917-c32a1c39f348",
+    "ticker": "HCL",
+    "company_name": "HCL Technologies",
+    "filing_type": "Related Party Transaction",
+    "summary": "The company has entered into a third related-party transaction for cloud services worth Rs 300 crore, following earlier deals in logistics (Rs 100 crore) and real estate (Rs 150 crore) within the past 4 months. The company's total exposure to related-party transactions has now reached Rs 550 crore, which may require disclosure and approval from the audit committee and shareholders as per regulatory requirements.",
+    "significance_score": 6,
+    "filed_at": "2026-07-28",
+    "stored_at": "2026-07-29T13:07:49.722699+00:00"
+  },
+  {
+    "id": "af8da78f-6ba6-4325-833c-55e6c5784c91",
+    "ticker": "AXISBANK",
+    "company_name": "Axis Bank",
+    "filing_type": "Board Meeting Outcome",
+    "summary": "The company's board has approved a dividend payment of Rs 4 per share, marking the third consecutive increase in dividend payments over the past year. The company is now paying out 40% of its profits as dividends to shareholders, which is higher than its historical average of 25%, indicating increased confidence in earnings and cash flow.",
+    "significance_score": 6,
+    "filed_at": "2026-07-28",
+    "stored_at": "2026-07-29T13:08:02.624141+00:00"
+  },
+  {
+    "id": "22990edc-9943-4062-842e-aecfba298d89",
+    "ticker": "BAJAJAUT",
+    "company_name": "Bajaj Auto",
+    "filing_type": "Financial Results",
+    "summary": "A company has reported that its factories are running at only 65% capacity\u2014the lowest level in the past 5 years\u2014because demand for two-wheelers has weakened. The management is expected to revise its business outlook downward based on this weak production activity.",
+    "significance_score": 7,
+    "filed_at": "2026-07-28",
+    "stored_at": "2026-07-29T13:08:14.500282+00:00"
+  },
+  {
+    "id": "f3429360-e673-4db2-ac07-0b27bdc9357d",
+    "ticker": "INFY",
+    "company_name": "Infosys",
+    "filing_type": "Financial Results",
+    "summary": "The company's quarterly earnings showed a significant slowdown, with revenue growth falling to just 1% compared to 5% in the previous quarter, indicating a deceleration in business performance. Profit margins have shrunk by 1 percentage point and continued to decline for the second straight quarter, pressuring profitability. Management has lowered its profit growth forecast for the full financial year 2027, now expecting only 2-4% growth instead of the previously projected 4-6%.",
+    "significance_score": 8,
+    "filed_at": "2026-07-29",
+    "stored_at": "2026-07-29T13:14:22.521587+00:00"
+  },
+  {
+    "id": "67236672-a2c7-4766-9b90-34c3e8ae7b03",
+    "ticker": "INFY",
+    "company_name": "Infosys",
+    "filing_type": "Related Party Transaction",
+    "summary": "The company's board has approved a contract to buy IT services worth Rs 200 crore from Infosys Consulting, a subsidiary where the CEO is a director. This is the second major deal between the company and Infosys Consulting in the last 6 months, raising questions about whether these transactions are being done on fair terms.",
+    "significance_score": 7,
+    "filed_at": "2026-07-29",
+    "stored_at": "2026-07-29T13:14:39.491411+00:00"
+  },
+  {
+    "id": "aa49e464-361b-44e6-acc5-792760407ad9",
+    "ticker": "INFY",
+    "company_name": "Infosys",
+    "filing_type": "Resignation/Appointment",
+    "summary": "The company's Chief Financial Officer (CFO) has announced early retirement after 12 years with the organization, effective after a 6-month transition period. This marks the third senior executive departure in the past 18 months, following the exits of the Chief Technology Officer and Chief Strategy Officer. The company is managing the transition with a 6-month handover period to ensure continuity.",
+    "significance_score": 7,
+    "filed_at": "2026-07-29",
+    "stored_at": "2026-07-29T13:14:56.521890+00:00"
+  },
+  {
+    "id": "9f57c51b-efc8-47bb-becd-1a1e4817a124",
+    "ticker": "TCS",
+    "company_name": "TCS",
+    "filing_type": "Auditor Change",
+    "summary": "Auditor M/s Kanakia & Associates has resigned from their position after 16 months, citing other commitments. This is the second auditor change within a 36-month period, which may indicate instability in the company's audit arrangements.",
+    "significance_score": 8,
+    "filed_at": "2026-07-29",
+    "stored_at": "2026-07-29T13:15:11.471324+00:00"
   }
 ]
