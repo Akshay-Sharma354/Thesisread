@@ -468,5 +468,65 @@
     "significance_score": 8,
     "filed_at": "2026-07-29",
     "stored_at": "2026-07-29T13:15:11.471324+00:00"
+  },
+  {
+    "id": "392a69f6-82ff-4c31-82da-995ced926198",
+    "ticker": "RELIANCE",
+    "company_name": "Reliance Industries",
+    "filing_type": "Board Meeting Outcome",
+    "summary": "The company's board has approved a Rs 15,000 crore investment in renewable energy projects, marking the fifth major clean energy announcement in the past 18 months. This is part of the company's broader commitment to invest Rs 85,000 crore in renewable energy by 2030, demonstrating a significant strategic shift towards sustainable energy infrastructure.",
+    "significance_score": 6,
+    "filed_at": "2026-07-29",
+    "stored_at": "2026-07-29T13:15:27.547227+00:00"
+  },
+  {
+    "id": "45820ef0-c641-4e22-a7f9-29407a2a6e85",
+    "ticker": "RELIANCE",
+    "company_name": "Reliance Industries",
+    "filing_type": "Promoter Shareholding/Pledge",
+    "summary": "The company's promoter has pledged an additional 2% of their shareholding as collateral, bringing the total pledged shares to 18% of their holdings. This represents a significant increase from just 5% two years ago, with the pledging accelerating during a period of weakness in the stock price.",
+    "significance_score": 7,
+    "filed_at": "2026-07-29",
+    "stored_at": "2026-07-29T13:15:42.110565+00:00"
+  },
+  {
+    "id": "b7715109-2363-4554-89dd-a61126ad7b76",
+    "ticker": "HCL",
+    "company_name": "HCL Technologies",
+    "filing_type": "Related Party Transaction",
+    "summary": "The company has received approval to buy cloud services worth Rs 300 crore from HCL Infra, which is owned by the company's promoters. The company did not commission an independent valuation to verify that this price is fair and reasonable compared to market rates.",
+    "significance_score": 6,
+    "filed_at": "2026-07-29",
+    "stored_at": "2026-07-29T13:15:59.187459+00:00"
+  },
+  {
+    "id": "1fe7d867-8516-4557-a3f9-4ceba839951c",
+    "ticker": "HCL",
+    "company_name": "HCL Technologies",
+    "filing_type": "Related Party Transaction",
+    "summary": "The company has entered into a third related-party transaction worth Rs 300 crore for cloud services within a 4-month period. Combined with previous related-party deals in logistics (Rs 100 crore) and real estate (Rs 150 crore), the company's total exposure to related-party transactions has reached Rs 550 crore. These transactions require regulatory disclosure and shareholder approval as per SEBI guidelines.",
+    "significance_score": 6,
+    "filed_at": "2026-07-29",
+    "stored_at": "2026-07-29T13:16:13.677263+00:00"
+  },
+  {
+    "id": "b9262381-1ce7-454f-b719-299798546f0d",
+    "ticker": "AXISBANK",
+    "company_name": "Axis Bank",
+    "filing_type": "Corporate Action",
+    "summary": "The company's board has approved a dividend of Rs 4 per share, marking the third dividend increase within the past year. The company is now distributing 40% of its profits to shareholders, up from its historical average of 25%, indicating a more shareholder-friendly capital allocation policy.",
+    "significance_score": 5,
+    "filed_at": "2026-07-29",
+    "stored_at": "2026-07-29T13:16:29.147738+00:00"
+  },
+  {
+    "id": "bdc024ed-c784-401f-8748-afd18cfa9b6d",
+    "ticker": "BAJAJAUT",
+    "company_name": "Bajaj Auto",
+    "filing_type": "Financial Results",
+    "summary": "The company's manufacturing plants are running at only 65% of their capacity, the lowest level in the past five years, due to weak demand in the two-wheeler industry. Management is expected to revise its business guidance downward to reflect this challenging operational environment.",
+    "significance_score": 7,
+    "filed_at": "2026-07-29",
+    "stored_at": "2026-07-29T13:16:41.478775+00:00"
   }
 ]
