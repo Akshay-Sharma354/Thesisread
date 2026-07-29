@@ -1,5 +1,4 @@
-const API_BASE = "http://localhost:8000";
-
+const API_BASE = "https://thesisread.onrender.com";
 // Tab switching
 document.querySelectorAll(".tab-btn").forEach(btn => {
   btn.addEventListener("click", () => {
