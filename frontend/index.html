@@ -1,72 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>SEBI Filing Intelligence</title>
-<link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ThesisRead - AI Filing Intelligence</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>SEBI Filing Intelligence</h1>
-    <p class="tagline">Every filing, explained - and compared against everything that came before it.</p>
-  </header>
+  <div class="header">
+    <h1>ThesisRead</h1>
+    <p>AI-powered corporate filing analyzer for Indian stock investors</p>
+  </div>
 
-  <main>
-    <section id="submit-panel">
-      <h2>Analyze a filing</h2>
-      
-      <div class="tab-buttons">
-        <button class="tab-btn active" data-tab="text-tab">Paste Text</button>
-        <button class="tab-btn" data-tab="file-tab">Upload File</button>
-        <button class="tab-btn" data-tab="csv-tab">Upload CSV</button>
-      </div>
+  <div class="container">
+    <div class="grid">
+      <!-- Left Panel: Input -->
+      <div class="card">
+        <div class="card-header">📊 Analyze a Filing</div>
+        
+        <div class="tabs">
+          <button class="tab-btn active" data-tab="paste">Paste Text</button>
+          <button class="tab-btn" data-tab="file">Upload File</button>
+          <button class="tab-btn" data-tab="csv">Upload CSV</button>
+        </div>
 
-      <!-- Text input tab -->
-      <div id="text-tab" class="tab-content active">
-        <form id="filing-form">
-          <div class="row">
-            <input type="text" id="company_name" placeholder="Company name" required />
-            <input type="text" id="ticker" placeholder="Ticker (e.g. INFY)" required />
+        <!-- Paste Text Tab -->
+        <div id="paste-tab" class="tab-content active">
+          <div class="form-group">
+            <label class="form-label">Company Name</label>
+            <input type="text" id="paste-company" class="form-input" placeholder="e.g., Reliance Industries">
           </div>
-          <textarea id="raw_text" rows="8" placeholder="Paste the filing text here..." required></textarea>
-          <button type="submit">Analyze</button>
-        </form>
-        <div id="analyze-status"></div>
-      </div>
-
-      <!-- File upload tab -->
-      <div id="file-tab" class="tab-content">
-        <form id="file-form">
-          <div class="row">
-            <input type="text" id="file_company_name" placeholder="Company name" required />
-            <input type="text" id="file_ticker" placeholder="Ticker (e.g. INFY)" required />
+          <div class="form-group">
+            <label class="form-label">Ticker Symbol</label>
+            <input type="text" id="paste-ticker" class="form-input" placeholder="e.g., RELIANCE">
           </div>
-          <input type="file" id="filing_file" accept=".pdf,.docx,.txt" required />
-          <button type="submit">Upload & Analyze</button>
-        </form>
-        <div id="file-status"></div>
+          <div class="form-group">
+            <label class="form-label">Filing Text</label>
+            <textarea id="paste-text" class="form-textarea" placeholder="Paste the filing text here..."></textarea>
+          </div>
+          <button class="btn" onclick="analyzePaste()">Analyze Filing</button>
+          <div id="paste-status" class="status-text"></div>
+        </div>
+
+        <!-- Upload File Tab -->
+        <div id="file-tab" class="tab-content">
+          <div class="form-group">
+            <label class="form-label">Company Name</label>
+            <input type="text" id="file-company" class="form-input" placeholder="e.g., Reliance Industries">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Ticker Symbol</label>
+            <input type="text" id="file-ticker" class="form-input" placeholder="e.g., RELIANCE">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Select File (PDF, DOCX, TXT)</label>
+            <div class="file-input-wrapper">
+              <input type="file" id="file-input" accept=".pdf,.docx,.txt">
+              <div class="file-btn" onclick="document.getElementById('file-input').click()">
+                📁 Choose File
+              </div>
+              <div id="file-name" class="status-text">No file chosen</div>
+            </div>
+          </div>
+          <button class="btn" onclick="uploadFile()">Upload & Analyze</button>
+          <div id="file-status" class="status-text"></div>
+        </div>
+
+        <!-- CSV Tab -->
+        <div id="csv-tab" class="tab-content">
+          <div class="form-group">
+            <label class="form-label">CSV Format</label>
+            <p class="status-text">Columns: company_name, ticker, filing_text, filed_at</p>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Select CSV File</label>
+            <div class="file-input-wrapper">
+              <input type="file" id="csv-input" accept=".csv">
+              <div class="file-btn" onclick="document.getElementById('csv-input').click()">
+                📊 Choose CSV
+              </div>
+              <div id="csv-name" class="status-text">No file chosen</div>
+            </div>
+          </div>
+          <button class="btn" onclick="uploadCSV()">Upload CSV</button>
+          <div id="csv-status" class="status-text"></div>
+        </div>
       </div>
 
-      <!-- CSV upload tab -->
-      <div id="csv-tab" class="tab-content">
-        <p style="font-size: 0.9rem; color: #8B93A3; margin-bottom: 1rem;">
-          CSV format: company_name, ticker, filing_text, filed_at
-        </p>
-        <input type="file" id="csv_file" accept=".csv" required />
-        <button id="csv-submit" type="button">Upload CSV</button>
-        <div id="csv-status"></div>
+      <!-- Right Panel: Alert Feed -->
+      <div class="card">
+        <div class="card-header">
+          📢 Alert Feed
+          <button class="refresh-btn" onclick="loadAlerts()">🔄</button>
+        </div>
+        <div id="alert-feed" class="alert-feed">
+          <div class="empty-state">
+            <div class="empty-state-icon">📭</div>
+            <p>No filings analyzed yet. Upload a filing to get started!</p>
+          </div>
+        </div>
       </div>
-    </section>
+    </div>
+  </div>
 
-    <section id="feed-panel">
-      <div class="feed-header">
-        <h2>Alert feed</h2>
-        <button id="refresh-btn">Refresh</button>
-      </div>
-      <div id="feed"></div>
-    </section>
-  </main>
+  <div class="footer">
+    <p>ThesisRead © 2026 | AI-powered SEBI Filing Intelligence for Retail Investors</p>
+  </div>
 
   <script src="app.js"></script>
 </body>
