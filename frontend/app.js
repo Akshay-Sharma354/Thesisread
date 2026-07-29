@@ -1,4 +1,4 @@
-const API_BASE = "http://localhost:8000";
+const API_BASE = "https://thesisread.onrender.com";
 
 // Text form
 const form = document.getElementById("filing-form");
