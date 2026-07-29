@@ -11,6 +11,7 @@ from models import FilingInput
 from pipeline import run_pipeline
 from rag import memory_store
 from services.csv_ingestion import ingest_from_csv
+from services.email_service import send_filing_alert, send_test_email
 import config
 
 logging.basicConfig(level=logging.INFO)
@@ -47,16 +48,26 @@ def analyze_filing(company_name: str = Form(...), ticker: str = Form(...), raw_t
     try:
         filing = FilingInput(company_name=company_name, ticker=ticker, raw_text=raw_text)
         result = run_pipeline(filing)
+        
+        significance_score = result.get('significance', {}).get('significance_score', 0)
+        if significance_score >= 7:
+            alert_email = os.environ.get("ALERT_EMAIL")
+            if alert_email:
+                send_filing_alert(
+                    recipient_email=alert_email,
+                    company_name=company_name,
+                    ticker=ticker,
+                    headline=result.get('alert_headline', ''),
+                    body=result.get('alert_body', ''),
+                    significance_score=significance_score
+                )
+        
         return result
     except Exception as e:
-        raise HTTPException(500, f"Pipeline failed: {str(e)}")
+        raise HTTPException(500, "Pipeline failed: " + str(e))
 
 @app.post("/filings/upload")
-async def upload_filing(
-    company_name: str = Form(...),
-    ticker: str = Form(...),
-    file: UploadFile = File(...),
-):
+async def upload_filing(company_name: str = Form(...), ticker: str = Form(...), file: UploadFile = File(...)):
     filename = file.filename.lower()
     
     try:
@@ -66,14 +77,11 @@ async def upload_filing(
         if filename.endswith('.pdf'):
             reader = PdfReader(io.BytesIO(contents))
             text = "\n".join(page.extract_text() or "" for page in reader.pages)
-        
         elif filename.endswith('.docx'):
             doc = Document(io.BytesIO(contents))
             text = "\n".join(para.text for para in doc.paragraphs)
-        
         elif filename.endswith('.txt'):
             text = contents.decode('utf-8')
-        
         else:
             raise HTTPException(400, "Supported formats: PDF, DOCX, TXT")
         
@@ -83,12 +91,25 @@ async def upload_filing(
         
         filing = FilingInput(company_name=company_name, ticker=ticker, raw_text=text)
         result = run_pipeline(filing)
+        
+        significance_score = result.get('significance', {}).get('significance_score', 0)
+        if significance_score >= 7:
+            alert_email = os.environ.get("ALERT_EMAIL")
+            if alert_email:
+                send_filing_alert(
+                    recipient_email=alert_email,
+                    company_name=company_name,
+                    ticker=ticker,
+                    headline=result.get('alert_headline', ''),
+                    body=result.get('alert_body', ''),
+                    significance_score=significance_score
+                )
+        
         return result
-    
     except HTTPException:
         raise
     except Exception as e:
-        raise HTTPException(500, f"Upload failed: {str(e)}")
+        raise HTTPException(500, "Upload failed: " + str(e))
 
 @app.post("/ingest/csv")
 async def upload_csv(file: UploadFile = File(...)):
@@ -101,7 +122,19 @@ async def upload_csv(file: UploadFile = File(...)):
         result = ingest_from_csv(csv_content)
         return result
     except Exception as e:
-        raise HTTPException(500, f"CSV ingestion failed: {str(e)}")
+        raise HTTPException(500, "CSV ingestion failed: " + str(e))
+
+@app.post("/alerts/test-email")
+def test_email(email: str = Form(...)):
+    """Test email alert system"""
+    try:
+        success = send_test_email(email)
+        if success:
+            return {"status": "success", "message": "Test email sent! Check your inbox."}
+        else:
+            return {"status": "error", "message": "Failed to send test email. Check email credentials."}
+    except Exception as e:
+        raise HTTPException(500, "Test email failed: " + str(e))
 
 @app.get("/alerts")
 def get_alerts(limit: int = 50):

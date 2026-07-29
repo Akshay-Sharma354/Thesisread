@@ -128,5 +128,105 @@
     "significance_score": 6,
     "filed_at": "2026-07-28",
     "stored_at": "2026-07-28T13:45:12.138049+00:00"
+  },
+  {
+    "id": "58db63c1-3422-4da1-b652-d56b9a582d28",
+    "ticker": "INFY",
+    "company_name": "Infosys",
+    "filing_type": "Financial Results",
+    "summary": "The company's Q2 revenue growth has slowed significantly to just 1% year-over-year compared to 5% in Q1, and profit margins have narrowed by 100 basis points for the second quarter in a row. Management has also cut its full-year FY2027 guidance in half, lowering the expected growth range from 4-6% to 2-4%, signaling continued challenges ahead.",
+    "significance_score": 8,
+    "filed_at": "2026-07-28",
+    "stored_at": "2026-07-29T12:04:38.469780+00:00"
+  },
+  {
+    "id": "74670bc6-0279-4a08-81c1-949298c46a82",
+    "ticker": "INFY",
+    "company_name": "Infosys",
+    "filing_type": "Related Party Transaction",
+    "summary": "The company's board has approved a Rs 200 crore contract with Infosys Consulting, a subsidiary where the CEO serves as a director. This is the second major deal with the same related entity in six months, which requires disclosure due to the CEO's conflict of interest in the arrangement.",
+    "significance_score": 6,
+    "filed_at": "2026-07-20",
+    "stored_at": "2026-07-29T12:04:52.702312+00:00"
+  },
+  {
+    "id": "c17323fc-b125-4e5b-a0a9-a7aa78071a01",
+    "ticker": "INFY",
+    "company_name": "Infosys",
+    "filing_type": "Resignation/Appointment",
+    "summary": "The company's Chief Financial Officer (CFO) has announced early retirement after 12 years of service, with a 6-month transition period. This is the third senior executive departure in the last 18 months, following the exits of the CTO and Chief Strategy Officer. The company must now manage the transition and recruit a replacement CFO.",
+    "significance_score": 8,
+    "filed_at": "2026-07-10",
+    "stored_at": "2026-07-29T12:05:07.040286+00:00"
+  },
+  {
+    "id": "5f167863-54ae-41a9-bad6-7d9b213eb5fe",
+    "ticker": "TCS",
+    "company_name": "TCS",
+    "filing_type": "Auditor Change",
+    "summary": "The company's auditor, M/s Kanakia & Associates, has resigned due to other commitments after serving for 16 months of their 5-year appointment term. This is the second auditor change within the last 3 years, which may warrant investor attention regarding audit continuity and stability.",
+    "significance_score": 8,
+    "filed_at": "2026-07-28",
+    "stored_at": "2026-07-29T12:05:18.509564+00:00"
+  },
+  {
+    "id": "acd9dcd8-7d58-4027-a5b5-3b09e7bf8ae6",
+    "ticker": "RELIANCE",
+    "company_name": "Reliance Industries",
+    "filing_type": "Board Meeting Outcome",
+    "summary": "The company's board has approved a Rs 15,000 crore investment in renewable energy projects, marking the fifth major clean energy announcement in the past 18 months. This is part of a larger Rs 85,000 crore commitment to renewable energy development by 2030, demonstrating the company's strategic focus on sustainable energy infrastructure.",
+    "significance_score": 6,
+    "filed_at": "2026-07-28",
+    "stored_at": "2026-07-29T12:05:34.687061+00:00"
+  },
+  {
+    "id": "ecc8946c-1988-448f-84ac-2a6b39658efd",
+    "ticker": "RELIANCE",
+    "company_name": "Reliance Industries",
+    "filing_type": "Promoter Shareholding/Pledge",
+    "summary": "The company's promoter (main owner) has pledged an additional 2% of their shareholding as collateral, bringing the total pledged shares to 18%. This represents a significant increase from just 5% pledged two years earlier, and the pledging activity is accelerating during a period of stock price weakness, which may indicate the promoter is borrowing against their shares.",
+    "significance_score": 7,
+    "filed_at": "2026-07-25",
+    "stored_at": "2026-07-29T12:05:48.406899+00:00"
+  },
+  {
+    "id": "3e853cde-0eaa-48fc-bd7f-e778943c44ef",
+    "ticker": "HCL",
+    "company_name": "HCL Technologies",
+    "filing_type": "Related Party Transaction",
+    "summary": "The company has approved a deal to buy cloud services from HCL Infra, a company connected to the promoter (the main shareholder), for Rs 300 crore. This is a related-party transaction that the company disclosed, though no independent valuation report was attached to support the pricing.",
+    "significance_score": 6,
+    "filed_at": "2026-07-28",
+    "stored_at": "2026-07-29T12:05:56.070722+00:00"
+  },
+  {
+    "id": "7f6c2214-51a8-4434-b705-c149a9f60cc9",
+    "ticker": "HCL",
+    "company_name": "HCL Technologies",
+    "filing_type": "Related Party Transaction",
+    "summary": "The company has entered into its third related-party transaction in four months, this time for cloud services valued at Rs 300 crore. Combined with earlier transactions for logistics (Rs 100 crore) and real estate (Rs 150 crore), the company's total exposure to related-party deals has reached Rs 550 crore. This rapid succession of transactions with connected parties warrants shareholder disclosure and approval as per regulatory requirements.",
+    "significance_score": 6,
+    "filed_at": "2026-07-28",
+    "stored_at": "2026-07-29T12:06:09.603774+00:00"
+  },
+  {
+    "id": "f18f91bb-cb04-4cec-a16e-8979100e906a",
+    "ticker": "AXISBANK",
+    "company_name": "Axis Bank",
+    "filing_type": "Corporate Action",
+    "summary": "The company's board has approved a dividend of Rs 4 per share, marking the third dividend increase within the past 12 months. This dividend represents a payout ratio of 40%, which is higher than the company's historical average of 25%, indicating increased cash returns to shareholders.",
+    "significance_score": 6,
+    "filed_at": "2026-07-28",
+    "stored_at": "2026-07-29T12:06:17.898196+00:00"
+  },
+  {
+    "id": "383f8267-967e-4f7a-8b3f-abc8900e31ff",
+    "ticker": "BAJAJAUT",
+    "company_name": "Bajaj Auto",
+    "filing_type": "Financial Results",
+    "summary": "The company's manufacturing plants are running at only 65% of their total capacity, the lowest level in the past 5 years, due to weak customer demand in the two-wheeler market. Management is expected to revise its earnings and business outlook downward to reflect this operational slowdown.",
+    "significance_score": 7,
+    "filed_at": "2026-07-28",
+    "stored_at": "2026-07-29T12:06:25.088664+00:00"
   }
 ]

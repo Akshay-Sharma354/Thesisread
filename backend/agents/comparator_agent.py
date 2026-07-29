@@ -1,39 +1,79 @@
+"""
+Enhanced comparator agent - detects patterns, anomalies, and behavioral trends.
+"""
+import logging
 from agents.json_agent import call_json
 from config import REASONING_MODEL
 from models import ComparisonResult
 from rag import memory_store
 
-SYSTEM_PROMPT = """You are a pattern-detection agent. You are given one new filing summary for a
-company, plus a list of that company's past filing summaries (most relevant first).
+logger = logging.getLogger(__name__)
 
-Your job: spot what's DIFFERENT or REPEATING compared to history that a human skimming
-each filing individually would miss. Examples of what to look for:
-- A number that changed direction (margins improving -> declining, debt going up)
-- A repeated event (e.g. this is the Nth auditor/CFO change, Nth related-party deal)
-- A contradiction between what was said before and what's being said now
-- A pattern only visible across multiple filings (e.g. promoter pledge creeping up filing after filing)
+SYSTEM_PROMPT = """You are an advanced pattern-detection agent for an Indian stock market filing analyzer.
 
-If there is no meaningful history, or nothing notable emerges from comparison, say so plainly -
-do not invent patterns.
+You are given ONE new filing for a company, plus that company's past filing summaries (most relevant first).
 
-Return exactly these fields as JSON:
-- has_history: boolean, whether any past filings were available to compare against
-- notable_changes: list of short strings describing specific changes/differences found (empty if none)
-- pattern_note: one sentence flagging a recurring pattern across 2+ filings, or null if none
+Your job: Spot PATTERNS and ANOMALIES that humans skimming filings would miss.
+
+**Patterns to look for:**
+- Recurring events at increasing frequency (auditor changes, related-party deals, management resignations)
+- Behavioral trends (promoter pledging every 6 months, always during stock rallies)
+- Contradictions (promised capex that never materialized, guidance that keeps getting cut)
+- Sudden deviations from historical baseline
+
+**Anomalies to flag:**
+- "Sudden spike in related-party transactions after 2 years of silence"
+- "This is the 4th management resignation in 12 months (vs 1 in prior 5 years)"
+- "Company now pledging 40% of promoter stake vs historical 5-10%"
+- "Auditor resignation 14 months in (vs historical 4.8 year average tenure)"
+
+Return ONLY valid JSON with these exact fields:
+{
+  "has_history": boolean,
+  "notable_changes": list of 2-3 specific changes compared to history (empty if none),
+  "pattern": one sentence describing a multi-filing pattern, or null if none detected,
+  "anomaly": one sentence flagging a deviation from historical norm, or null if none,
+  "frequency_trend": "accelerating" or "stable" or "decelerating" or null
+}
 """
 
-
-def compare(ticker: str, current_summary: str) -> ComparisonResult:
-    history = memory_store.get_history(ticker, current_summary)
+def compare(ticker: str, current_summary: str, filing_type: str = None):
+    """
+    Compare current filing against history. Detect patterns AND anomalies.
+    """
+    history = memory_store.get_history(ticker, current_summary, n_results=10)
 
     if not history:
         return ComparisonResult(has_history=False, notable_changes=[], pattern_note=None)
 
     history_text = "\n".join(
-        f"- [{h.get('filed_at', 'unknown date')}] ({h.get('filing_type', 'unknown type')}) {h['summary']}"
+        "- [" + h.get('filed_at', 'unknown date') + "] (" + h.get('filing_type', 'unknown') + ") " + h['summary']
         for h in history
     )
-    user_content = f"New filing summary:\n{current_summary}\n\nPast filings for this company:\n{history_text}"
 
-    result = call_json(REASONING_MODEL, SYSTEM_PROMPT, user_content)
-    return ComparisonResult(**result)
+    user_content = "Company: " + ticker + "\n"
+    user_content = user_content + "Current filing type: " + str(filing_type) + "\n"
+    user_content = user_content + "Current summary: " + current_summary + "\n\n"
+    user_content = user_content + "Past 10 filings (most similar first):\n" + history_text + "\n\n"
+    user_content = user_content + "Analyze for patterns and anomalies."
+
+    try:
+        result = call_json(REASONING_MODEL, SYSTEM_PROMPT, user_content, max_tokens=1500)
+        
+        pattern_note = None
+        if result.get("pattern"):
+            pattern_note = result["pattern"]
+        if result.get("anomaly"):
+            if pattern_note:
+                pattern_note = result["anomaly"] + " " + pattern_note
+            else:
+                pattern_note = result["anomaly"]
+        
+        return ComparisonResult(
+            has_history=result.get("has_history", True),
+            notable_changes=result.get("notable_changes", []),
+            pattern_note=pattern_note
+        )
+    except Exception as e:
+        logger.error("Comparator agent failed: " + str(e))
+        return ComparisonResult(has_history=len(history) > 0, notable_changes=[], pattern_note=None)
