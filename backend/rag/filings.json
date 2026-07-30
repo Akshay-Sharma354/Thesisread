@@ -818,5 +818,105 @@
     "significance_score": 7,
     "filed_at": "2026-07-28",
     "stored_at": "2026-07-29T14:04:39.976842+00:00"
+  },
+  {
+    "id": "TCS_Auditor Change",
+    "ticker": "TCS",
+    "company_name": "TCS",
+    "filing_type": "Auditor Change",
+    "summary": "Auditor M/s Kanakia & Associates resigns citing other commitments after 16 months into 5-year term. This is the second auditor change in 36 months.",
+    "significance_score": 6,
+    "filed_at": "2026-07-28",
+    "stored_at": "2026-07-30T07:20:10.346013+00:00"
+  },
+  {
+    "id": "RELIANCE_Filing",
+    "ticker": "RELIANCE",
+    "company_name": "Reliance Industries",
+    "filing_type": "Filing",
+    "summary": "Board approves Rs 15000 crore investment in renewable energy. This is the fifth major clean energy capex announcement in 18 months. Total committed: Rs 85000 crore by 2030.",
+    "significance_score": 5,
+    "filed_at": "2026-07-28",
+    "stored_at": "2026-07-30T07:20:16.632461+00:00"
+  },
+  {
+    "id": "RELIANCE_Filing",
+    "ticker": "RELIANCE",
+    "company_name": "Reliance Industries",
+    "filing_type": "Filing",
+    "summary": "Promoter pledges additional 2% of shareholding. Cumulative pledge now at 18% (vs 5% two years ago). Pledging accelerating during stock weakness.",
+    "significance_score": 7,
+    "filed_at": "2026-07-28",
+    "stored_at": "2026-07-30T07:20:23.186284+00:00"
+  },
+  {
+    "id": "AXISBANK_Dividend",
+    "ticker": "AXISBANK",
+    "company_name": "Axis Bank",
+    "filing_type": "Dividend",
+    "summary": "Board approved dividend of Rs 4 per share. This is the third consecutive dividend increase in 12 months. Payout ratio at 40% (historical average: 25%).",
+    "significance_score": 6,
+    "filed_at": "2026-07-28",
+    "stored_at": "2026-07-30T07:20:35.291554+00:00"
+  },
+  {
+    "id": "BAJAJAUT_Filing",
+    "ticker": "BAJAJAUT",
+    "company_name": "Bajaj Auto",
+    "filing_type": "Filing",
+    "summary": "Production capacity utilization drops to 65% (lowest in 5 years). Management cites demand weakness in two-wheeler segment. Guidance revision expected.",
+    "significance_score": 7,
+    "filed_at": "2026-07-28",
+    "stored_at": "2026-07-30T07:20:44.383886+00:00"
+  },
+  {
+    "id": "TCS_Auditor Change",
+    "ticker": "TCS",
+    "company_name": "TCS",
+    "filing_type": "Auditor Change",
+    "summary": "Auditor M/s Kanakia & Associates resigns citing other commitments after 16 months into 5-year term. This is the second auditor change in 36 months.",
+    "significance_score": 6,
+    "filed_at": "2026-07-28",
+    "stored_at": "2026-07-30T07:23:57.505590+00:00"
+  },
+  {
+    "id": "RELIANCE_Filing",
+    "ticker": "RELIANCE",
+    "company_name": "Reliance Industries",
+    "filing_type": "Filing",
+    "summary": "Board approves Rs 15000 crore investment in renewable energy. This is the fifth major clean energy capex announcement in 18 months. Total committed: Rs 85000 crore by 2030.",
+    "significance_score": 6,
+    "filed_at": "2026-07-28",
+    "stored_at": "2026-07-30T07:24:02.947659+00:00"
+  },
+  {
+    "id": "RELIANCE_Filing",
+    "ticker": "RELIANCE",
+    "company_name": "Reliance Industries",
+    "filing_type": "Filing",
+    "summary": "Promoter pledges additional 2% of shareholding. Cumulative pledge now at 18% (vs 5% two years ago). Pledging accelerating during stock weakness.",
+    "significance_score": 7,
+    "filed_at": "2026-07-28",
+    "stored_at": "2026-07-30T07:24:12.353691+00:00"
+  },
+  {
+    "id": "AXISBANK_Dividend",
+    "ticker": "AXISBANK",
+    "company_name": "Axis Bank",
+    "filing_type": "Dividend",
+    "summary": "Board approved dividend of Rs 4 per share. This is the third consecutive dividend increase in 12 months. Payout ratio at 40% (historical average: 25%).",
+    "significance_score": 6,
+    "filed_at": "2026-07-28",
+    "stored_at": "2026-07-30T07:24:28.537510+00:00"
+  },
+  {
+    "id": "BAJAJAUT_Filing",
+    "ticker": "BAJAJAUT",
+    "company_name": "Bajaj Auto",
+    "filing_type": "Filing",
+    "summary": "Production capacity utilization drops to 65% (lowest in 5 years). Management cites demand weakness in two-wheeler segment. Guidance revision expected.",
+    "significance_score": 7,
+    "filed_at": "2026-07-28",
+    "stored_at": "2026-07-30T07:24:35.704113+00:00"
   }
 ]

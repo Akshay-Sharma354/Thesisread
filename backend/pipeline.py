@@ -1,5 +1,5 @@
 """
-4-Agent Pipeline - Bulletproof Version
+Ultra-safe Pipeline
 """
 import logging
 from agents.extraction_agent import extract
@@ -12,72 +12,57 @@ from rag import memory_store
 
 logger = logging.getLogger(__name__)
 
+def safe_str(val):
+    """Convert any value to safe string"""
+    if val is None:
+        return ""
+    return str(val)
+
 def run_pipeline(filing: FilingInput):
-    """Execute pipeline safely"""
+    """Execute pipeline with max safety"""
     try:
-        # Extraction
-        ext = extract(filing.company_name or "Unknown", filing.ticker or "N/A", filing.raw_text or "")
-        ftype = ext.get('filing_type', 'Filing') if ext else 'Filing'
-        summ = ext.get('summary', 'No summary') if ext else 'No summary'
-        date = ext.get('date', '2026-07-28') if ext else '2026-07-28'
+        ext = extract(safe_str(filing.company_name), safe_str(filing.ticker), safe_str(filing.raw_text))
+        ftype = safe_str(ext.get('filing_type', 'Filing'))
+        summ = safe_str(ext.get('summary', 'No summary'))
+        date = safe_str(ext.get('date', '2026-07-28'))
         
-        # Significance
-        sig = score(filing.company_name or "Unknown", filing.ticker or "N/A", summ, ftype)
+        sig = score(safe_str(filing.company_name), safe_str(filing.ticker), summ, ftype)
         score_val = sig.get('significance_score', 5) if sig else 5
-        senti = sig.get('sentiment', 'neutral') if sig else 'neutral'
+        senti = safe_str(sig.get('sentiment', 'neutral') if sig else 'neutral')
         
-        # Comparator
-        comp = compare(filing.ticker or "N/A", summ, ftype)
+        comp = compare(safe_str(filing.ticker), summ, ftype)
         pattern = comp.get('pattern_note') if comp else None
         
-        # Alert
-        alrt = generate_alert(filing.company_name or "Unknown", filing.ticker or "N/A", summ, score_val, senti, pattern)
-        headline = alrt.get('alert_headline', 'Filing Alert') if alrt else 'Filing Alert'
-        body = alrt.get('alert_body', 'No details') if alrt else 'No details'
+        alrt = generate_alert(safe_str(filing.company_name), safe_str(filing.ticker), summ, score_val, senti, pattern)
+        headline = safe_str(alrt.get('alert_headline', 'Filing Alert') if alrt else 'Filing Alert')
+        body = safe_str(alrt.get('alert_body', 'No details') if alrt else 'No details')
         
-        # Signal
-        sig_obj = generate_signal(filing.company_name or "Unknown", filing.ticker or "N/A", score_val, senti, pattern)
+        sig_obj = generate_signal(safe_str(filing.company_name), safe_str(filing.ticker), score_val, senti, pattern)
         
-        result = {
-            "company_name": str(filing.company_name or "Unknown"),
-            "ticker": str(filing.ticker or "N/A"),
-            "filing_type": str(ftype),
-            "filed_at": str(date),
+        return {
+            "company_name": safe_str(filing.company_name),
+            "ticker": safe_str(filing.ticker),
+            "filing_type": ftype,
+            "filed_at": date,
             "significance_score": int(score_val) if score_val else 5,
-            "sentiment": str(senti),
-            "alert_headline": str(headline),
-            "alert_body": str(body),
-            "pattern_note": str(pattern) if pattern else None,
+            "sentiment": senti,
+            "alert_headline": headline,
+            "alert_body": body,
+            "pattern_note": pattern,
             "signal": sig_obj if sig_obj else {}
         }
-        
-        # Store safely
-        try:
-            memory_store.add_filing(
-                filing_id=str(filing.ticker or "N/A") + "_" + str(ftype),
-                ticker=str(filing.ticker or "N/A"),
-                company_name=str(filing.company_name or "Unknown"),
-                filing_type=str(ftype),
-                summary=str(summ),
-                significance_score=int(score_val) if score_val else 5,
-                filed_at=str(date)
-            )
-        except:
-            pass
-        
-        return result
     
     except Exception as e:
-        logger.error("Pipeline error: " + str(e))
+        logger.error("Pipeline error: " + safe_str(e))
         return {
-            "company_name": str(filing.company_name or "Unknown"),
-            "ticker": str(filing.ticker or "N/A"),
+            "company_name": safe_str(filing.company_name),
+            "ticker": safe_str(filing.ticker),
             "filing_type": "Filing",
             "filed_at": "2026-07-28",
             "significance_score": 0,
             "sentiment": "neutral",
             "alert_headline": "Filing Received",
-            "alert_body": "Filing was analyzed",
+            "alert_body": "Filing was processed",
             "pattern_note": None,
             "signal": {}
         }
